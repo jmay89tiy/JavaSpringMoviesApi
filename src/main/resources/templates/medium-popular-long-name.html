@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<h3>These movies are playing in theaters with a rating between 30 and 80, with longer titles (10 charachters or more club!):</h3>
+
+<div th:each="movie : ${movies}">
+
+    <img width="150px" th:src="'http://image.tmdb.org/t/p/original' + ${movie.posterPath}"/>
+
+    <span th:text="${movie.title}"></span>
+</div>
+
+
+
+</body>
+</html>
